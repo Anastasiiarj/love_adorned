@@ -1,0 +1,27 @@
+@charset 'UTF-8';
+
+@import 'vendors/normalize';
+@import 'vendors/font-awesome';
+@import 'vendors/slick';
+@import '../sass/vendors/jquery.fancybox.css';
+
+@import 'helpers/variables';
+@import 'helpers/grid';
+@import 'helpers/mixins';
+@import 'helpers/breakpoints';
+@import 'helpers/sprite';
+
+@import 'base/reset';
+@import 'base/base';
+
+@import 'layout/header';
+@import 'layout/footer';
+
+@import 'components/button';
+@import 'components/form';
+@import 'components/table';
+@import 'components/hamburger';
+
+@import 'pages/home';
+@import 'pages/text-page';
+@import 'pages/product-page';

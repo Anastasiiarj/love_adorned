@@ -1,0 +1,249 @@
+.footer {
+  padding: 0 59px 0 272px;
+  @include breakpoint(xl) {
+    padding: 0;
+  }
+
+  h6 {
+    font-weight: 700;
+    @include breakpoint(md) {
+      font-size: 16px;
+    }
+  }
+}
+
+.footer-header {
+  @include flexbox();
+  justify-content: space-between;
+  align-items: center;
+
+  h6 {
+    font-weight: 700;
+    padding: 0 50px;
+    margin-bottom: 0;
+    @include breakpoint(lg) {
+      padding: 0 30px;
+    }
+    @include breakpoint(md) {
+        padding: 0 15px;
+      }
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: relative;
+
+    img {
+      max-width: 200px;
+      padding: 20px;
+      position: relative;
+      z-index: 2;
+      background-color: $white;
+      @include breakpoint(sm) {
+        max-width: 150px;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $black;
+      z-index: -1;
+    }
+  }
+}
+
+.footer-body {
+  min-height: 280px;
+  background-color: $black;
+  @include flexbox();
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  color: $white;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  @include breakpoint(md) {
+    padding: 30px 15px;
+    min-height: inherit;
+  }
+
+  a {
+    color: $white;
+  }
+
+  h6 {
+    color: $white;
+  }
+}
+
+.footer-contact {
+  max-width: 400px;
+  @include breakpoint(xxl) {
+    width: 50%;
+    max-width: 300px;
+    margin-bottom: 50px;
+  }
+  @include breakpoint(xl) {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  @include breakpoint(sm) {
+    margin-bottom: 30px;
+  }
+
+  h6 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+}
+
+.footer-contact-list {
+  li {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+}
+
+.footer-menu {
+  max-width: 400px;
+  width: 100%;
+  columns: 2;
+  -moz-columns: 2;
+  -webkit-columns: 2;
+  @include breakpoint(lg) {
+    margin-bottom: 30px;
+  }
+
+  li {
+    margin-bottom: 7px;
+    a {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.footer-form {
+  max-width: 465px;
+  @include breakpoint(xxl) {
+    width: 50%;
+    //order: 0;
+  }
+  @include breakpoint(xl) {
+    width: 100%;
+  }
+
+  h6 {
+    font-size: 16px;
+  }
+
+  .block-form {
+    @include flexbox();
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint(sm) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .form-group {
+    @include breakpoint(xs) {
+      width: 100%;
+    }
+
+    .btn {
+      border: 3px solid $white;
+      margin-left: 18px;
+      width: 147px;
+      @include breakpoint(sm) {
+        margin-top: 25px;
+        margin-left: 0;
+      }
+      @include breakpoint(xs) {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .form-control {
+    border-bottom: 1px solid $white;
+    color: $white;
+    width: 275px;
+    @include breakpoint(xs) {
+      width: 100%;
+    }
+  }
+
+  .form-control::placeholder {
+    color: $white;
+  }
+}
+
+.payment-list {
+  @include flexbox();
+  justify-content: space-between;
+  align-items: center;
+  max-width: 255px;
+  margin-top: 26px;
+}
+
+.payment-link {
+  position: relative;
+  width: 34px;
+  height: 22px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 22px;
+  }
+}
+
+.payment-link-1 {
+  &:before {
+    @include sprite($payment-1);
+  }
+}
+
+.payment-link-2 {
+  &:before {
+    @include sprite($payment-2);
+  }
+}
+
+.payment-link-3 {
+  &:before {
+    @include sprite($payment-3);
+  }
+}
+
+.payment-link-4 {
+  &:before {
+    @include sprite($payment-4);
+  }
+}
+
+.payment-link-5 {
+  &:before {
+    @include sprite($payment-5);
+  }
+}
+
+.payment-link-6 {
+  &:before {
+    @include sprite($payment-6);
+  }
+}

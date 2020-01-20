@@ -1,0 +1,852 @@
+.product-page {
+
+  #header .logo {
+    width: 272px;
+    @include breakpoint(md) {
+      width: 200px;
+    }
+  }
+
+  .content-padding {
+    padding-left: 100px;
+    @include breakpoint(xxl) {
+      padding-left: 50px;
+    }
+    @include breakpoint(md) {
+      padding-left: 30px;
+    }
+  }
+
+  .content-menu {
+    padding-left: 322px;
+    @include breakpoint(md) {
+      padding-left: 15px;
+    }
+  }
+
+
+  /* section-hero */
+
+  .section-hero {
+    padding-left: 0;
+    @include flexbox();
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include breakpoint(xxl) {
+      align-items: flex-start;
+    }
+    @include breakpoint(xl) {
+      padding-left: 50px;
+    }
+    @include breakpoint(lg) {
+      padding-left: 30px;
+    }
+    @include breakpoint(md) {
+      padding-left: 15px;
+    }
+
+    .slider-wrapper {
+      width: 69%;
+      position: relative;
+      padding-left: 0;
+      @include breakpoint(xxl) {
+        width: 50%;
+        padding-bottom: 115px;
+      }
+      @include breakpoint(md) {
+        min-width: 100%;
+        width: auto;
+        margin: 0 -15px;
+      }
+    }
+
+    .product-slider {
+      height: 100%;
+
+      .slick-list {
+        height: 100%;
+
+        .slick-track {
+          height: 100%;
+        }
+      }
+
+      .slick-slide {
+        @include breakpoint(xxl) {
+          max-width: inherit;
+        }
+        &>div {
+          height: 100%;
+        }
+
+        .slick-item {
+          position: relative;
+          //height: 654px;
+          height: 100%;
+          padding: 0 0 111px 38px;
+          transition: padding .7s ease-in;
+          @include breakpoint(xxl) {
+            height: 500px;
+          }
+          @include breakpoint(xxl) {
+            padding: 0;
+            transition: unset;
+          }
+
+          .btn-view {
+            position: absolute;
+            bottom: 20px;
+            left: 11px;
+            @include breakpoint(md) {
+              display: none;
+            }
+          }
+
+          .img-wrapper {
+            position: relative;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+          }
+        }
+      }
+
+      .slick-current {
+
+        .slick-item {
+          padding: 0;
+        }
+      }
+    }
+
+    .slider-counter-wrapper {
+      position: absolute;
+      bottom: 30px;
+      right: 0;
+      @include breakpoint(xxxl) {
+        bottom: 24px;
+      }
+      @include breakpoint(xxl) {
+        bottom: 23px;
+      }
+      @include breakpoint(md) {
+        bottom: 32px;
+        right: 50%;
+        transform: translateX(50%);
+        text-align: center;
+        width: 100%;
+      }
+
+      .slider-counter-current {
+        @include breakpoint(xxxl) {
+          margin-right: 80px;
+
+          &:after {
+            width: 67px;
+          }
+        }
+      }
+
+      .slider-counter-next {
+        @include breakpoint(xxxl) {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .slick-prev,
+    .slick-next {
+      top: 89%;
+      @include breakpoint(xxl) {
+        top: 108%;
+      }
+    }
+
+    .slick-prev {
+      left: 29vw;
+      @include breakpoint(xxxl) {
+        left: 27vw;
+      }
+      @include breakpoint(xxl) {
+        left: 4px;
+      }
+    }
+
+    .slick-next {
+      left: 33vw;
+      @include breakpoint(xxxl) {
+        left: 32vw;
+      }
+      @include breakpoint(xxl) {
+        left: 84px;
+      }
+    }
+
+    .product-description {
+      width: 31%;
+      padding: 97px 0 50px 70px;
+      @include breakpoint(xxl) {
+        width: 50%;
+        padding-left: 50px;
+        padding-top: 120px;
+      }
+      @include breakpoint(lg) {
+        padding-left: 30px;
+      }
+      @include breakpoint(md) {
+        width: 100%;
+        padding-top: 20px;
+        padding-left: 0;
+        max-width: inherit;
+      }
+
+      h4 {
+        font-family: $second-font-family;
+      }
+
+      .product-price {
+        font-family: $second-font-family;
+        padding-bottom: 40px;
+        position: relative;
+        margin-bottom: 15px;
+      }
+
+      .btn-black {
+        max-width: inherit;
+        margin-top: 35px;
+      }
+
+      .product-info {
+        color: $gray-light;
+        font-size: 12px;
+        margin-top: 27px;
+
+        a {
+          display: block;
+          text-decoration: underline;
+          color: $gray-light;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+
+  /* section-details */
+
+  .section-details {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 0;
+    padding-right: 0;
+    @include breakpoint(md) {
+      padding: 0;
+    }
+
+    .content-padding {
+      @include breakpoint(lg) {
+        padding-left: 0;
+      }
+      @include breakpoint(md) {
+        padding-left: 15px;
+      }
+    }
+
+    .block-left {
+      width: 72%;
+      max-width: 1088px;
+      background: $gray url("../images/content/fon_product.png") no-repeat bottom left;
+      margin-left: -50px;
+      padding-left: 50px;
+      position: relative;
+      @include breakpoint(md) {
+        width: 100%;
+        max-width: inherit;
+        margin-left: 0;
+        padding-left: 0;
+      }
+    }
+
+    .block-right {
+      width: 36%;
+      margin-left: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+      @include breakpoint(md) {
+        display: none;
+      }
+    }
+
+    .tabs__caption {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 90px;
+      background-color: $black;
+      padding: 0 70px 0 150px;
+      margin-left: -150px;
+      @include breakpoint(md) {
+        margin-left: -135px;
+        padding-right: 15px;
+      }
+
+      li {
+        font-size: 12px;
+        padding: 7px 12px;
+        margin-left: 20px;
+        color: $white;
+        border-bottom: 2px solid $black;
+        cursor: pointer;
+        transition: all .5s ease;
+        &.active {
+          border-bottom: 2px solid $white;
+        }
+        &:first-child {
+          margin-left: -14px;
+        }
+        @include breakpoint(md) {
+          margin-left: 14px;
+        }
+        &:hover {
+          border-bottom: 2px solid $white;
+        }
+      }
+    }
+
+    .tabs__content {
+      display: none;
+      padding: 140px 70px 140px 0;
+      flex-direction: column;
+      justify-content: flex-start;
+      @include breakpoint(xxl) {
+        padding: 70px 50px 70px 0;
+      }
+      @include breakpoint(xl) {
+        padding-right: 50px;
+      }
+      @include breakpoint(lg) {
+        padding: 50px 30px 50px 0;
+      }
+      @include breakpoint(md) {
+        padding-right: 15px;
+      }
+
+      p {
+        font-size: 17px;
+        @include breakpoint(md) {
+          font-size: 16px;
+        }
+
+        strong {
+          font-weight: 600;
+        }
+      }
+
+      &.active {
+        display: flex;
+      }
+
+      .block-info {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 40px;
+        margin-top: 80px;
+        position: relative;
+        @include breakpoint(xxl) {
+          margin-top: 40px;
+        }
+        @include breakpoint(lg) {
+          margin-top: 20px;
+        }
+        @include breakpoint(xs) {
+          flex-direction: column;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 2px;
+          width: 130%;
+          background-color: $black;
+          @include breakpoint(xxl) {
+            width: 100%;
+          }
+          @include breakpoint(xl) {
+            width: 130%;
+          }
+          @include breakpoint(md) {
+            width: 100%;
+          }
+        }
+
+        p {
+          font-size: 12px;
+          font-weight: 600;
+          margin-bottom: 0;
+          color: $gray-light;
+
+          strong{
+            font-weight: 800;
+            text-transform: uppercase;
+            color: $black;
+          }
+        }
+
+        .block-info_left {
+          width: 50%;
+          @include breakpoint(xs) {
+            width: 100%;
+          }
+
+          ul {
+            display: flex;
+            margin-top: 25px;
+
+            li {
+              width: 58px;
+              height: 58px;
+              border-radius: 50%;
+              background-color: $black;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-left: 10px;
+              &:first-child {
+                margin-left: 0;
+              }
+            }
+          }
+        }
+
+        .block-info_right {
+          width: 50%;
+          padding-left: 30px;
+          @include breakpoint(md) {
+            display: block;
+          }
+          @include breakpoint(xs) {
+            padding-left: 0;
+            margin-top: 50px;
+            width: 100%;
+          }
+
+          p {
+            strong {
+              font-weight: 700;
+            }
+          }
+
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 13px;
+
+            li {
+              margin-left: 2px;
+              margin-bottom: 12px;
+              a {
+                font-size: 12px;
+                font-weight: 700;
+                color: $white;
+                padding: 6px 18px 5px;
+                background-color: $black;
+                border: 2px solid $black;
+
+                &:hover {
+                  background-color: $white;
+                  color: $black;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .call-us {
+      position: absolute;
+      top: 30px;
+      right: 70px;
+      @include breakpoint(xxxl) {
+        right: 30px;
+      }
+      @include breakpoint(xxl) {
+        display: none;
+      }
+      @include breakpoint(xl) {
+        display: block;
+        top: 31px;
+        right: 50px;
+      }
+      @include breakpoint(lg) {
+        right: 30px;
+      }
+      @include breakpoint(md) {
+        right: 15px;
+      }
+      @include breakpoint(xs) {
+        display: none;
+      }
+
+      p,
+      a {
+        font-size: 18px;
+        color: $white;
+        text-decoration: none;
+        display: inline-block;
+        @include breakpoint(xxxl) {
+          font-size: 16px;
+        }
+        @include breakpoint(xl) {
+          font-size: 12px;
+        }
+      }
+
+      p {
+        @include breakpoint(lg) {
+          display: none;
+        }
+      }
+    }
+  }
+
+
+  /* section-top-product */
+
+  .section-top-products {
+    padding-top: 140px;
+    padding-bottom: 140px;
+    @include breakpoint(xxxl) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    @include breakpoint(xxl) {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+    @include breakpoint(xl) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .section-header {
+      h4 {
+        max-width: 230px;
+      }
+
+      .title-section {
+        top: 20em;
+        left: -23em;
+        @include breakpoint(xxl) {
+          left: -20em;
+        }
+        @include breakpoint(lg) {
+          top: 18.5em;
+        }
+        @include breakpoint(md) {
+          left: -19em;
+        }
+      }
+    }
+
+    .slider-top-products {
+      margin-right: -50px;
+      @include breakpoint(md) {
+        margin-right: 0;
+      }
+
+      .picture-wrapper {
+        position: relative;
+        margin-bottom: 30px;
+      }
+
+      .slick-item {
+        display: block;
+        padding: 0 5px;
+        max-width: 386px;
+        position: relative;
+        @include breakpoint(md) {
+          max-width: 285px;
+        }
+
+        .hover-wrapper {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          background-color: rgba(216,187,163, .7);
+          opacity: 0;
+          transition: opacity .3s ease;
+
+          .view-link {
+            font-size: 20px;
+            color: $white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            letter-spacing: .07em;
+            white-space: nowrap;
+
+            &:before {
+              background-color: $white;
+            }
+
+            &:after {
+              border-left-color: $white;
+            }
+          }
+        }
+
+        &:hover {
+          .hover-wrapper {
+            opacity: 1;
+          }
+        }
+      }
+
+      .btn-view {
+        position: absolute;
+        bottom: 20px;
+        right: 15px;
+      }
+
+      .product-info {
+        text-align: center;
+        padding-bottom: 30px;
+
+        p {
+          font-size: 20px;
+          font-family: $second-font-family;
+          @include breakpoint(md) {
+            font-size: 16px;
+          }
+
+          strong {
+            display: block;
+            font-size: 30px;
+            line-height: 1em;
+            padding: 5px;
+            @include breakpoint(md) {
+              font-size: 26px;
+            }
+          }
+        }
+      }
+
+      .slick-prev,
+      .slick-next {
+        top: -19.5%;
+        @include breakpoint(xxxl) {
+          top: -15%;
+        }
+        @include breakpoint(lg) {
+          top: -13%;
+        }
+      }
+
+      .slick-next {
+        right: 24%;
+        @include breakpoint(xxxl) {
+          right: 31%;
+        }
+        @include breakpoint(xxl) {
+          right: 39%;
+        }
+        @include breakpoint(lg) {
+          right: 41%;
+        }
+      }
+
+      .slick-prev {
+        right: 31%;
+        @include breakpoint(xxxl) {
+          right: 38%;
+        }
+        @include breakpoint(xxl) {
+          right: 48%;
+        }
+        @include breakpoint(lg) {
+          right: 50%;
+        }
+      }
+    }
+  }
+
+  /* section-designer */
+
+  .section-designer {
+    padding-top: 120px;
+    padding-bottom: 100px;
+    background-color: $peach-light;
+    @include breakpoint(xxl) {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+    @include breakpoint(xl) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .content-padding {
+      @include flexbox();
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .title-section {
+      top: 30em;
+      left: -14em;
+      @include breakpoint(xxl) {
+        top: 25em;
+      }
+      @include breakpoint(xl) {
+        top: 24em;
+      }
+      @include breakpoint(lg) {
+        top: 22.5em;
+        left: -15em;
+      }
+      @include breakpoint(md) {
+        left: -16em;
+      }
+    }
+
+    .block-left {
+      max-width: 312px;
+      width: 37%;
+      @include breakpoint(xxl) {
+        width: 50%;
+        max-width: inherit;
+        padding-right: 15px;
+      }
+      @include breakpoint(md) {
+        max-width: inherit;
+        width: 100%;
+      }
+
+      p {
+
+      }
+    }
+
+    .contact-address {
+      position: relative;
+      margin-top: 120px;
+      @include breakpoint(xxl) {
+        margin-top: 30px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 55%;
+        right: 0;
+        height: 1px;
+        width: 150%;
+        background-color: $black;
+        @include breakpoint(md) {
+          width: 100%;
+        }
+      }
+
+      strong {
+        display: block;
+        font-size: 12px;
+        text-transform: uppercase;
+        line-height: 1.9em;
+        padding: 20px 0 5px;
+      }
+
+      p {
+        font-size: 12px;
+        font-weight: 600;
+        color: $gray-light;
+      }
+    }
+
+    .block-right {
+      max-width: 870px;
+      width: 63%;
+      @include flexbox();
+      justify-content: flex-end;
+      align-items: flex-start;
+      position: relative;
+      @include breakpoint(xxxl) {
+        width: 58%;
+      }
+      @include breakpoint(xxl) {
+        width: 40%;
+        align-items: center;
+      }
+      @include breakpoint(md) {
+        width: 100%;
+        padding-bottom: 70px;
+      }
+
+      .border-wrapper-top {
+        background: $peach-light url("../images/content/10years-bg.png") no-repeat 11% 0 / 271% auto;
+        position: absolute;
+        top: 25px;
+        left: -84px;
+        border: 39px solid $peach-light;
+        max-width: 21.7vw;
+        width: 100%;
+        max-height: 21.7vw;
+        height: 100%;
+        z-index: 1;
+        @include breakpoint(xxl) {
+          max-width: 17.7vw;
+          max-height: 17.7vw;
+          border-width: 15px;
+          top: 95px;
+        }
+        @include breakpoint(xl) {
+          max-width: 22vw;
+          max-height: 22vw;
+        }
+        @include breakpoint(lg) {
+          left: -60px;
+        }
+        @include breakpoint(md) {
+          top: 0;
+          left: -15px;
+          max-width: 42vw;
+          max-height: 42vw;
+        }
+      }
+
+      .border-wrapper {
+        max-width: 42.3vw;
+        position: relative;
+        border: 15px solid $white;
+        right: 54px;
+        top: 52px;
+        @include breakpoint(lg) {
+          right: 18px;
+        }
+        @include breakpoint(md) {
+          right: 18px;
+          max-width: 80vw;
+        }
+        @include breakpoint(xs) {
+          max-width: 73vw;
+        }
+
+        img {
+          display: block;
+          margin: 45px -33px -33px 69px;
+          @include breakpoint(lg) {
+            margin: 33px -33px -33px 33px;
+          }
+        }
+      }
+    }
+  }
+
+}
